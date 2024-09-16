@@ -1,0 +1,56 @@
+<div class="content">
+  <div class="form-wrapper">
+    <form [formGroup]="loginForm">
+      <div class="tui-col_12">
+        <tui-island>
+          <h3 class="tui-island__title">Sign in</h3>
+          <div class="tui-island__paragraph tui-island__paragraph_link">
+            <div class="tui-form__row">
+              <p>
+                <tui-input formControlName="email"> Type an email</tui-input>
+              </p>
+
+            </div>
+
+            <div class="tui-form__row">
+              <p>
+                <tui-input-password formControlName="password">
+                  Type a password
+                </tui-input-password>
+              </p>
+            </div>
+
+            <div class="tui-form__row">
+              <p>
+                <tui-checkbox-labeled formControlName="remember">
+                  Remember me?
+                </tui-checkbox-labeled>
+              </p>
+            </div>
+          </div>
+
+          <div class="tui-island_text-align_right">
+<!--            <a-->
+<!--              tuiButton-->
+<!--              type="button"-->
+<!--              class="tui-form__buttons_align_end"-->
+<!--              appearance="accent"-->
+<!--              [routerLink]="['/dashboard']"-->
+<!--              size="m"-->
+<!--            >-->
+<!--              Login-->
+<!--            </a>-->
+            <button tuiButton  class="tui-form__buttons_align_end" appearance="accent" (click)="login()">
+              Login
+            </button>
+          </div>
+
+          <a tuiButton [routerLink]="['/register']" type="button" size="m" class="tui-island__footer-button"
+             appearance="accent">
+            Register
+          </a>
+        </tui-island>
+      </div>
+    </form>
+  </div>
+</div>
